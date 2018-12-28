@@ -127,64 +127,40 @@ In retrain model, the parameters as follows:
 * optimizer = Adam, add the L2 regularization to improve the perfomace    
 * batch size = 128, it is limited to my GPU card    
 * max epochs = 80, from the 8th, if there is no improvement among 10 epochs, it will stop in advance    
-* Dropout parameters: keep_pro1 = 0.9, keep_pro2 = 0.8, keep_pro3 = 0.5   
 
 ```python
-    EPOCH 48 ... Train Accuracy = 0.9998  Validation Accuracy = 0.9984
-    Current Best Validation Accuracy = 0.9984 has saved completely!
-    EPOCH 49 ... Train Accuracy = 0.9991  Validation Accuracy = 0.9965
-    EPOCH 50 ... Train Accuracy = 0.9995  Validation Accuracy = 0.9978
-    EPOCH 51 ... Train Accuracy = 0.9994  Validation Accuracy = 0.9977
-    EPOCH 52 ... Train Accuracy = 0.9991  Validation Accuracy = 0.9972
-    EPOCH 53 ... Train Accuracy = 0.9996  Validation Accuracy = 0.9980
-    EPOCH 54 ... Train Accuracy = 0.9988  Validation Accuracy = 0.9970
-    EPOCH 55 ... Train Accuracy = 0.9997  Validation Accuracy = 0.9984
-    EPOCH 56 ... Train Accuracy = 0.9996  Validation Accuracy = 0.9979
-    EPOCH 57 ... Train Accuracy = 0.9995  Validation Accuracy = 0.9980
-    EPOCH 58 ... Train Accuracy = 0.9988  Validation Accuracy = 0.9967
-    EPOCH 59 ... Train Accuracy = 0.9995  Validation Accuracy = 0.9978
-    10 epochs have no improvement after the best validation accuracy = 0.9984
-    Best Accuracy = 0.9984 Model has saved!
+Training...
+
+EPOCH 1 
+Validation Accuracy = 0.896
+Train Accuracy = 0.921
+
+EPOCH 2 
+Validation Accuracy = 0.929
+Train Accuracy = 0.968
+ ....
+EPOCH 98 
+Validation Accuracy = 0.974
+Train Accuracy = 1.000
+
+EPOCH 99 
+Validation Accuracy = 0.978
+Train Accuracy = 1.000
+
+EPOCH 100 
+Validation Accuracy = 0.979
+Train Accuracy = 1.000
+
 ```
-
-#### FineTune model parameters different from Retrain parameters      
-* learning rate = 0.0001      
-* Dropout parameters: keep_pro1 = 0.9, keep_pro2 = 0.75, keep_pro3 = 0.5   
-* other parameters are as same as retrain parameters    
-
-```python
-    EPOCH 11 ... Train Accuracy = 1.0000  Validation Accuracy = 0.9992
-    Current Best Validation Accuracy = 0.9992 has saved completely!
-    EPOCH 12 ... Train Accuracy = 1.0000  Validation Accuracy = 0.9988
-    EPOCH 13 ... Train Accuracy = 1.0000  Validation Accuracy = 0.9991
-    EPOCH 14 ... Train Accuracy = 1.0000  Validation Accuracy = 0.9991
-    EPOCH 15 ... Train Accuracy = 1.0000  Validation Accuracy = 0.9989
-    EPOCH 16 ... Train Accuracy = 1.0000  Validation Accuracy = 0.9990
-    EPOCH 17 ... Train Accuracy = 1.0000  Validation Accuracy = 0.9987
-    EPOCH 18 ... Train Accuracy = 1.0000  Validation Accuracy = 0.9991
-    EPOCH 19 ... Train Accuracy = 0.9999  Validation Accuracy = 0.9986
-    EPOCH 20 ... Train Accuracy = 0.9999  Validation Accuracy = 0.9987
-    EPOCH 21 ... Train Accuracy = 1.0000  Validation Accuracy = 0.9989
-    EPOCH 22 ... Train Accuracy = 1.0000  Validation Accuracy = 0.9990
-    10 epochs have no improvement after the best validation accuracy = 0.9992
-    Best Accuracy = 0.9992 Model has saved!
-```    
-
 ## 4、Describe the approach
 
 My final model results were:   
-* training set accuracy of ?   
-  Train Accuracy = 1.0000   
-* validation set accuracy of ?   
-  Validation Accuracy = 0.9990    
-* test set accuracy of ?    
-  Test Accuracy = 0.9879     
+* Train Accuracy = 1.000  
+* Validation Accuracy = 0.979    
+* Test Accuracy = 0.965     
 
-An iterative approach was chosen:    
-* What was the first architecture that was tried and why was it chosen?    
-  firstly, I choose the model like Lenet, becouse it is classics.    
-* What were some problems with the initial architecture?    
-  It is easyly overfitting.    
+Firstly, I choose the model like VGG16, becouse it is classics but i have found that it is easyly overfitting.    
+  
 * How was the architecture adjusted and why was it adjusted? Typical adjustments could include choosing a different model architecture, adding or taking away layers (pooling, dropout, convolution, etc), using an activation function or changing the activation function. One common justification for adjusting an architecture would be due to overfitting or underfitting. A high accuracy on the training set but low accuracy on the validation set indicates over fitting; a low accuracy on both sets indicates under fitting.    
  Avoid overfitting, I add dropout layers after two conv layers. I choose Relu function as activation function to avoid vanishing gradient.     
 * Which parameters were tuned? How were they adjusted and why?    
