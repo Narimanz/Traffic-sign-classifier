@@ -169,30 +169,20 @@ My final model like VGG consisted of the following layers:
 
 | Layer         		|     Description	        					| 
 |:----------------------|:----------------------------------------------| 
-| Layer 1                                                               |
 | Input         		| 32x32x1 Gray image   							| 
 | Convolution 2D     	| 1x1 stride, same padding, outputs 28x28x6 	|
-| RELU					|												|
+| Activation					|	Tanh											|
 | Max pooling	      	| 2x2 stride,  outputs 14x14x6 				|
-| DropOut   	      	| keep Prob  				                |
-| Convolution 2D      	| 1x1 stride, same padding, outputs 16x16x64 	|
-| RELU					|												|
-| Convolution 3x3     	| 1x1 stride, same padding, outputs 16x16x64 	|
-| RELU					|												|
-| Max pooling	      	| 2x2 stride,  outputs 8x8x64 			     	|
+| Convolution 2D      	| 1x1 stride, same padding, outputs 10x10x16 	|
+| Activation					|	Tanh											|
+| Max pooling	      	| 2x2 stride,  outputs 5x5x16			     	|
+| Flatten             | output 400
+| Convolution 2D     	| 1x1 stride, same padding, outputs 1x1x400 	|
+| Activation					|	Tanh											|
+| Flatten              | output 400                   |
+| Concat       | Input = 400 + 400 Output = 800 |
 | DropOut   	      	| keep Prob = 0.9 				                |
-| Convolution 3x3     	| 1x1 stride, same padding, outputs 8x8x128 	|
-| RELU					|												|
-| Convolution 3x3     	| 1x1 stride, same padding, outputs 8x8x128 	|
-| RELU					|												|
-| Max pooling	      	| 2x2 stride,  outputs 4x4x128 		     		|
-| DropOut   	      	| keep Prob = 0.9 				                |
-| Fully connected		| outputs 2048       				    		|
-| DropOut   	      	| keep Prob = 0.8 				                |
-| Fully connected		| outputs 2048       				    		|
-| DropOut   	      	| keep Prob = 0.5 				                |
 | Fully connected		| outputs 43        				    		|
-| Softmax				| etc.        									|
 
 ## 3、Train, Validate and Test the Model
 
