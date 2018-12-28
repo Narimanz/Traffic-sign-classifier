@@ -23,17 +23,8 @@ In this project, I used a convolutional neural network to classify traffic signs
 
 ##  Randomly show all classes iamges
 
-    Random show each class form data set:
     
-
-
-![png](./writeup_img/output_12_1.png)
-
-
-
-```python
-# show_class_by_class_images(X_train,y_train)
-```
+![png](./index7.png)
 
 # Show class images histogram
 
