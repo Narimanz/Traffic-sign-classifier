@@ -64,7 +64,7 @@ Here is an exploratory visualization of the data set. It is a bar chart showing 
 
 ## Design and Test a Model Architecture
 
-Design and implement a deep learning model that learns to recognize traffic signs. Train and test your model on the [German Traffic Sign Dataset](http://benchmark.ini.rub.de/?section=gtsrb&subsection=dataset).
+Design and implement a deep learning model that learns to recognize traffic signs. Train and test your model on the [German Traffic Sign Dataset].
 
 ## 1、Pre-process the Data Set
 
@@ -169,13 +169,11 @@ My final model like VGG consisted of the following layers:
 
 | Layer         		|     Description	        					| 
 |:----------------------|:----------------------------------------------| 
-| Input         		| 32x32x3 RGB image   							| 
-| Convolution 3x3     	| 1x1 stride, same padding, outputs 32x32x32 	|
+| Input         		| 32x32x1 Gray image   							| 
+| Convolution 2D     	| 1x1 stride, same padding, outputs 28x28x6 	|
 | RELU					|												|
-| Convolution 3x3     	| 1x1 stride, same padding, outputs 32x32x32 	|
-| RELU					|												|
-| Max pooling	      	| 2x2 stride,  outputs 16x16x32 				|
-| DropOut   	      	| keep Prob = 0.9 				                |
+| Max pooling	      	| 2x2 stride,  outputs 14x14x6 				|
+| DropOut   	      	| keep Prob  				                |
 | Convolution 3x3     	| 1x1 stride, same padding, outputs 16x16x64 	|
 | RELU					|												|
 | Convolution 3x3     	| 1x1 stride, same padding, outputs 16x16x64 	|
