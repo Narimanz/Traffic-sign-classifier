@@ -117,17 +117,13 @@ For more details, here's the tensorflow summary graph with Tensorboard.
 
 ## 3、Train, Validate and Test the Model
 
-A validation set can be used to assess how well the model is performing. A low accuracy on the training and validation sets imply underfitting. A high accuracy on the training set but low accuracy on the validation set implies overfitting.
-
 ### Train mode parameters
 
 In retrain model, the parameters as follows:    
-* learning rate = 0.0005    
-* loss rate = 0.0001    
-* optimizer = Adam, add the L2 regularization to improve the perfomace    
-* batch size = 128, it is limited to my GPU card    
-* max epochs = 80, from the 8th, if there is no improvement among 10 epochs, it will stop in advance    
-
+* learning rate = 0.0009
+* optimizer = Adam    
+* batch size = 64    
+* max epochs = 100
 ```python
 Training...
 
