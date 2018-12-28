@@ -169,12 +169,13 @@ My final model like VGG consisted of the following layers:
 
 | Layer         		|     Description	        					| 
 |:----------------------|:----------------------------------------------| 
+| Layer 1                                                               |
 | Input         		| 32x32x1 Gray image   							| 
 | Convolution 2D     	| 1x1 stride, same padding, outputs 28x28x6 	|
 | RELU					|												|
 | Max pooling	      	| 2x2 stride,  outputs 14x14x6 				|
 | DropOut   	      	| keep Prob  				                |
-| Convolution 3x3     	| 1x1 stride, same padding, outputs 16x16x64 	|
+| Convolution 2D      	| 1x1 stride, same padding, outputs 16x16x64 	|
 | RELU					|												|
 | Convolution 3x3     	| 1x1 stride, same padding, outputs 16x16x64 	|
 | RELU					|												|
