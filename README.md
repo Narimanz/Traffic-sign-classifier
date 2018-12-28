@@ -32,16 +32,10 @@ Here is an exploratory visualization of the training data set. It is a bar chart
 
    ![png](./index.png)
    
-
-#### Show per class images frequency
-
-![png](./writeup_img/output_18_0.png)
+#### Show per class on test and valid set
 
 
-#### Show per class on train and test set
-
-
-![png](./writeup_img/output_20_0.png)
+![png](./index1.png)
 
 
 
