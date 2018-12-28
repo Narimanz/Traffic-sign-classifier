@@ -37,7 +37,7 @@ In this project, I used a convolutional neural network to classify traffic signs
 
 # Show class images histogram
 
-Here is an exploratory visualization of the data set. It is a bar chart showing how the data is not balanced.
+Here is an exploratory visualization of the training data set. It is a bar chart showing how the data is umbalanced.
 
    ![png](./index.png)
    
@@ -70,10 +70,20 @@ Design and implement a deep learning model that learns to recognize traffic sign
 ![png](./writeup_img/output_25_1.png)
 
 
-#### images generator
-
+#### Images generator
+In order to tackle the problem of umbalanced data set, i've set 2000 as a fixed number of examples for each class. For that, i have used some techniques and geometric transformations, thanks to OpenCV2, such as translation, rotation and affine transformation.   
 ```python
-gen_class_images_show(X_train,y_train,24)
+for class_n in range(n_classes):
+    class_indices = np.where(y_train == class_n)
+    n_samples = len(class_indices[0])
+    if n_samples < 2000:
+        for i in range(2000 - n_samples):
+            input_indices.append(class_indices[0][i%n_samples])
+            output_indices.append(new_X_train.shape[0])
+            new_img = new_X_train[class_indices[0][i % n_samples]]
+            new_img = random_translate(random_scaling(random_warp(random_brightness(new_img))))
+            new_X_train = np.concatenate((new_X_train, [new_img]), axis=0)
+            y_train = np.concatenate((y_train, [class_n]), axis=0)
 ```
 
 
