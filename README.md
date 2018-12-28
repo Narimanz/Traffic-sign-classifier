@@ -58,11 +58,19 @@ Here is an exploratory visualization of the training data set. It is a bar chart
 
 ## Design and Test a Model Architecture
 
-Design and implement a deep learning model that learns to recognize traffic signs. Train and test your model on the [German Traffic Sign Dataset].
+Design and implement a deep learning model that learns to recognize traffic signs. 
 
 ## 1. Pre-process the Data Set
+As a first step, I decided to convert the images to grayscale.
 
-#### The original images is not balanced, so generate the iamges data
+```python
+X_test_gry = np.sum(X_test/3, axis=3, keepdims=True)
+X_train_gry = np.sum(X_train/3, axis=3, keepdims=True)
+X_valid_gry = np.sum(X_valid/3, axis=3, keepdims=True)
+```
+
+
+#### The original images is not balanced, so i will generate additional data
 
 ![png](./writeup_img/output_24_1.png)
 
