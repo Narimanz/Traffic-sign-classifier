@@ -189,6 +189,7 @@ My final model Inspired by LeNET consisted of the following layers:
 | Fully connected		| outputs 43        				    		|
 
 For more details, here's the tensorflow summary graph with Tensorboard. 
+
 ![png](./graph_.png)
 
 
