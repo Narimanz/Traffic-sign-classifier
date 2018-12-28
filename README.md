@@ -18,7 +18,7 @@ In this project, I used a convolutional neural network to classify traffic signs
 
 ##  Randomly show images
   
-![png](./index3.png)
+![png](./index2.png)
 
 
 ##  Randomly show all classes iamges
