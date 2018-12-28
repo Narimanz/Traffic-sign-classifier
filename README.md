@@ -65,10 +65,10 @@ new_X_test =  (X_test_gry - 127.5)/127.5
 
 #### The original images is not balanced, so i will generate additional data
 
-![png](./writeup_img/output_24_1.png)
-
-
-![png](./writeup_img/output_25_1.png)
+![png](./index8.png)
+![png](./index9.png)
+![png](./index10.png)
+![png](./index11.png)
 
 
 #### Images generator
