@@ -73,6 +73,7 @@ new_X_test =  (X_test_gry - 127.5)/127.5
 
 #### Images generator
 In order to tackle the problem of umbalanced data set, i've set 2000 as a fixed number of examples for each class. For that, i have used some techniques and geometric transformations, thanks to OpenCV2, such as translation, rotation and affine transformation.   
+
 ```python
 for class_n in range(n_classes):
     class_indices = np.where(y_train == class_n)
@@ -85,87 +86,6 @@ for class_n in range(n_classes):
             new_img = random_translate(random_scaling(random_warp(random_brightness(new_img))))
             new_X_train = np.concatenate((new_X_train, [new_img]), axis=0)
             y_train = np.concatenate((y_train, [class_n]), axis=0)
-```
-
-
-![png](./writeup_img/output_28_0.png)
-
-
-    Generating images... Class = 24
-    Show Class = [24],Name=[Road narrows on the right] from data set,Show length is [20],Total length is [30]
-    
-
-
-![png](./writeup_img/output_28_2.png)
-
-
-#### images data merge
-
-
-```python
-X_train = np.concatenate((X_train, X_valid), axis=0)
-y_train = np.concatenate((y_train, y_valid), axis=0)
-```
-
-## Generator per class images to about 6000 to balace data
-
-```python
-X_train,y_train = gen_class_images(X_train,y_train)
-```
-    Class 38  : 2070, Generated samples numbers = 6060
-    Class 39  :  300, Generated samples numbers = 6084
-    Class 40  :  360, Generated samples numbers = 6016
-    Class 41  :  240, Generated samples numbers = 6128
-    Class 42  :  240, Generated samples numbers = 6128
-    Generate images data has completed!
-    
-
-#### Save generated image data
-
-
-```python
-import pickle
-gen_data_file = "traffic-signs-data/gen_data.p"
-print("Generated iamges numbers = {}".format(len(X_train)))
-pickle.dump({"images":X_train,"labels":y_train},open(gen_data_file,"wb"),protocol=4)
-print("Generated images data has saved completly!")
-```
-
-    Generated iamges numbers = 43619
-    Generated images data has saved completly!
-    
-
-#### Restore generated image data
-
-
-```python
-with open("traffic-signs-data/gen_data.p","rb") as f:
-    image_data = pickle.load(f)
-
-X_train,y_train = image_data["images"],image_data["labels"]
-```
-
-#### Split generated image data into train and valid set
-
-
-```python
-from sklearn.model_selection import train_test_split
-X_train,X_valid,y_train,y_valid = train_test_split(X_train,y_train,test_size=0.2,random_state=42)
-show_compared_histogram(y_train,y_valid)
-```
-
-![png](./writeup_img/output_39_0.png)
-
-#### Normalize image data
-
-For image data, `(pixel - 128.)/ 128.` is a quick way to approximately normalize the data . The image pixel is range [-1,1]. And it has mean 0. This process will made the model fastly convergence. The image as follows:
-
-![jpg](./writeup_img/normalized.jpg)
-
-```python
-X_train_normalized = (X_train - 128.)/128
-X_valid_normalized = (X_valid - 128.)/128.
-X_test_normalized =  (X_test - 128.)/128.
 ```
 
 ## 2、Model Architecture
