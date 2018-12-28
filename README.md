@@ -8,7 +8,7 @@ In this project, I used a convolutional neural network to classify traffic signs
 #### 1. A basic summary of the data set. 
 
   Number of training examples = 34799  
-  Number of testing examples = 12630
+  Number of testing examples = 12630                                                                                                   
   Number of validating examples = 4410   
   Image data shape = (32, 32, 3)   
   Number of classes = 43  
@@ -17,7 +17,7 @@ In this project, I used a convolutional neural network to classify traffic signs
 #### 2. An exploratory visualization of the dataset.
 
 Here is an exploratory visualization of the data set. It is a bar chart showing how the data is not balanced
-![png](./images/.png)
+![png](./index.png)
 
 
 
