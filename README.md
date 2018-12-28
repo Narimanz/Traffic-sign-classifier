@@ -22,7 +22,7 @@ Here is an exploratory visualization of the data set. It is a bar chart showing 
 
 
 
-##  Randomly show iamges`
+##  Randomly show images
   
 ![png](./index3.png)
 
