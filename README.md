@@ -169,7 +169,7 @@ X_test_normalized =  (X_test - 128.)/128.
 
 ## 2、Model Architecture
 
-My final model like VGG consisted of the following layers:
+My final model Inspired by LeNET consisted of the following layers:
 
 | Layer         		|     Description	        					| 
 |:----------------------|:----------------------------------------------| 
