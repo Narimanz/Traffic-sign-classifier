@@ -28,11 +28,13 @@ In this project, I used a convolutional neural network to classify traffic signs
 
 # Show class images histogram
 
+#### Show number of examples per class on train set
+
 Here is an exploratory visualization of the training data set. It is a bar chart showing how the data is umbalanced.
 
    ![png](./index.png)
    
-#### Show per class on test and valid set
+#### Show number of examples per class on test and valid set
 
 
 ![png](./index1.png)
