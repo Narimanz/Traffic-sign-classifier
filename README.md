@@ -71,9 +71,9 @@ X_valid_gry = np.sum(X_valid/3, axis=3, keepdims=True)
 Then, i normalize my data so that it has mean zero and equal variance. For image data, i used (pixel - 127.5)/ 127.5 as way to approximately normalize my data. 
 
 ```python
-new_X_train = (X_train_gry -127.5)/127.5
-new_X_valid = (X_valid_gry -127.5)/127.5
-new_X_test = (X_test_gry-127.5)/127.5
+new_X_train = (X_train_gry - 127.5)/127.5
+new_X_valid = (X_valid_gry - 127.5)/127.5
+new_X_test =  (X_test_gry - 127.5)/127.5
 ```
 
 #### The original images is not balanced, so i will generate additional data
