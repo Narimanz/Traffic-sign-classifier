@@ -180,7 +180,7 @@ My final model like VGG consisted of the following layers:
 | Convolution 2D     	| 1x1 stride, same padding, outputs 1x1x400 	|
 | Activation					|	Tanh											|
 | Flatten              | outputs 400                   |
-| Concat       | Inputs = 400 + 400 Outputs = 800 |
+| Concat       | Inputs = 400 + 400, Outputs = 800 |
 | DropOut   	      	| keep Prob 			                |
 | Fully connected		| outputs 43        				    		|
 
