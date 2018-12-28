@@ -151,7 +151,7 @@ Train Accuracy = 1.000
 ```
 And this is a graph that shows the evolution of the validation accuracy :
 
-                                               ![png](./index6.png)
+![png](./index6.png)
 
 My final model results were:   
 * Train Accuracy = 1.000  
