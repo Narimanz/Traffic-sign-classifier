@@ -181,13 +181,11 @@ Firstly, I choose the model like VGG16, becouse it is classics but i have found 
 
 ## Test a Model on New Images
 
-#### 1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
+Here are 8 German traffic signs that I found on the web with the result of prediction:
 
-Here are five German traffic signs that I found on the web:
+![png](./index13.png)
 
-![png](./writeup_img/output_68_0.png)
-
-    The first and the fourth image might be difficult to classify because beacuse of the irrelevant information like the watermark in the images.
+    The first and the second image might be difficult to classify because of their similarities with other traffic signs.
 
 #### 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
