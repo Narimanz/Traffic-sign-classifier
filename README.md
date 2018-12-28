@@ -124,6 +124,7 @@ In retrain model, the parameters as follows:
 * optimizer = Adam    
 * batch size = 64    
 * max epochs = 100
+### Train, Validate and Test the Model
 ```python
 Training...
 
@@ -148,7 +149,9 @@ Validation Accuracy = 0.979
 Train Accuracy = 1.000
 
 ```
-## 4、Describe the approach
+And this is a graph that shows the evolution of the validation accuracy :
+
+                                               ![png](./index6.png)
 
 My final model results were:   
 * Train Accuracy = 1.000  
