@@ -16,12 +16,6 @@ In this project, I used a convolutional neural network to classify traffic signs
 
 #### 2. An exploratory visualization of the dataset.
 
-Here is an exploratory visualization of the data set. It is a bar chart showing how the data is not balanced.
-
-   ![png](./index.png)
-
-
-
 ##  Randomly show images
   
 ![png](./index3.png)
@@ -43,6 +37,10 @@ Here is an exploratory visualization of the data set. It is a bar chart showing 
 
 # Show class images histogram
 
+Here is an exploratory visualization of the data set. It is a bar chart showing how the data is not balanced.
+
+   ![png](./index.png)
+   
 
 #### Show per class images frequency
 
