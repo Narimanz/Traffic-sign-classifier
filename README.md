@@ -22,13 +22,13 @@ Here is an exploratory visualization of the data set. It is a bar chart showing 
 
 
 
-##  Randomly show special class iamges`
+##  Randomly show iamges`
 
     Show Class = [8],Name=[Speed limit (120km/h)] from data set,Show length is [10],Total length is [1260]
     
 
 
-![png](./writeup_img/output_10_1.png)
+![png](./index3.png)
 
 
 ##  Randomly show all classes iamges
