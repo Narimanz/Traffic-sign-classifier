@@ -60,7 +60,7 @@ Here is an exploratory visualization of the training data set. It is a bar chart
 
 Design and implement a deep learning model that learns to recognize traffic signs. Train and test your model on the [German Traffic Sign Dataset].
 
-## 1、Pre-process the Data Set
+## 1. Pre-process the Data Set
 
 #### The original images is not balanced, so generate the iamges data
 
@@ -187,6 +187,10 @@ My final model like VGG consisted of the following layers:
 | Concat       | Inputs = 400 + 400, Outputs = 800 |
 | DropOut   	      	| keep Prob 			                |
 | Fully connected		| outputs 43        				    		|
+
+For more details, here's the tensorflow summary graph with Tensorboard. 
+
+
 
 ## 3、Train, Validate and Test the Model
 
