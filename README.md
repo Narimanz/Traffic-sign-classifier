@@ -95,14 +95,14 @@ My final model Inspired by LeNET consisted of the following layers:
 | Layer         		|     Description	        					| 
 |:----------------------|:----------------------------------------------| 
 | Input         		| 32x32x1 Gray image   							| 
-| Convolution 2D     	| 1x1 stride, same padding, outputs 28x28x6 	|
+| Convolution 2D     	| 1x1 stride, outputs 28x28x6 	|
 | Activation					|	Tanh											|
 | Max pooling	      	| 2x2 stride,  outputs 14x14x6 				|
-| Convolution 2D      	| 1x1 stride, same padding, outputs 10x10x16 	|
+| Convolution 2D      	| 1x1 stride, outputs 10x10x16 	|
 | Activation					|	Tanh											|
 | Max pooling	      	| 2x2 stride,  outputs 5x5x16			     	|
 | Flatten             | outputs 400
-| Convolution 2D     	| 1x1 stride, same padding, outputs 1x1x400 	|
+| Convolution 2D     	| 1x1 stride, outputs 1x1x400 	|
 | Activation					|	Tanh											|
 | Flatten              | outputs 400                   |
 | Concat       | Inputs = 400 + 400, Outputs = 800 |
