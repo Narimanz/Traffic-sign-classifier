@@ -197,7 +197,8 @@ The model was able to correctly guess 5 of the 5 traffic signs, which gives an a
 
 
 ```
-  For the last image, the model didn't rightly predict Turn Left Ahead sign, but predicted it with a probabbility of 0.4 and classified the image as a No Entry sign with a probability of 0.6 which is not close enough to 1. The top five soft max probabilities were:   ```
+  For the last image, the model didn't rightly predict Turn Left Ahead sign, but predicted it with a probabbility of 0.4 and classified the image as a No Entry sign with a probability of 0.6 which is not close enough to 1. The top five soft max probabilities were:   
+ ```
 ![png](./index22.png)
 
 
