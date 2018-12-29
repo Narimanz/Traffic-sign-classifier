@@ -159,15 +159,8 @@ My final model results were:
 * Test Accuracy = 0.965     
 
 Firstly, I choose a pretrained model like VGG16, because it is classic way to use transfer learning but i have found that it is easyly overfitting. Then, i decided to choose another model which is LeNET in my case and make some adjustments by adding or taking away some layers, i've changed the activation function. I found that generating new samples and having a balanced data helped me improve accuracy. Finally, i've tuned my hyperparameters.    
-  
-* How was the architecture adjusted and why was it adjusted? Typical adjustments could include choosing a different model architecture, adding or taking away layers (pooling, dropout, convolution, etc), using an activation function or changing the activation function. One common justification for adjusting an architecture would be due to overfitting or underfitting. A high accuracy on the training set but low accuracy on the validation set indicates over fitting; a low accuracy on both sets indicates under fitting.    
- Avoid overfitting, I add dropout layers after two conv layers. I choose Relu function as activation function to avoid vanishing gradient.     
-* Which parameters were tuned? How were they adjusted and why?    
-  I tune learning rate to 0.0001 in finetue model. Because reducing learing rate can make the loss function to minimum instead of oscillating back and forth.    
-* What are some of the important design choices and why were they chosen? For example, why might a convolution layer work well with this problem? How might a dropout layer help with creating a successful model?    
- Dropout and L2 regularization are very important. These design choices can avoid overfitting.    
 
-## 5、Analysis Error Images
+## 5. Analysis Error Images
 
  Through the following picture, we known the images which have a shadow or over exposure lead to accuracy lowly.    
 ```
@@ -181,10 +174,11 @@ Firstly, I choose a pretrained model like VGG16, because it is classic way to us
 
 ## Test a Model on New Images
 
-Here are 8 German traffic signs that I found on the web with the result of prediction:
+Here are 8 German traffic signs that I found on the web. 
 
 ![png](./index13.png)
 
+    2 of 8 signs were not well classified.
     The first and the second image might be difficult to classify because of their similarities with other traffic signs.
 
 #### 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
