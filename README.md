@@ -160,17 +160,7 @@ My final model results were:
 
 Firstly, I choose a pretrained model like VGG16, because it is classic way to use transfer learning but i have found that it is easyly overfitting. Then, i decided to choose another model which is LeNET in my case and make some adjustments by adding or taking away some layers, i've changed the activation function. I found that generating new samples and having a balanced data helped me improve accuracy. Finally, i've tuned my hyperparameters.    
 
-## 5. Analysis Error Images
 
- Through the following picture, we known the images which have a shadow or over exposure lead to accuracy lowly.    
-```
-    The number of incorrectly predict labels is 153
-```    
-
-
-![png](./writeup_img/output_65_1.png)
-
----
 
 ## Test a Model on New Images
 
@@ -187,16 +177,24 @@ Here are the results of the prediction:
 
 | Image			        |     Prediction	        					| 
 |:----------------------|:----------------------------------------------| 
-| Stop                  | Stop                    			     		| 
+| Bumpy road |  Bumpy road                    			     		|
+| Double-curve |  Children crossing                    			     		|
+| General caution       	| General caution         							|
 | Speed limit (50km/h)  | Speed limit (50km/h)  						|
-| Road work         	| Road work         							|
-| Turn left ahead  		| Turn left ahead		    	 				|
-| Speed limit (120km/h)	| Speed limit (120km/h) 							|
+| Speed limit (70km/h)  | Speed limit (70km/h)  						|
+| No entry 		| Turn left ahead		    	 				|
+| Priority road|  Priority road 							|
+| Slippery road|  Slippery road 							|
     
 The model was able to correctly guess 5 of the 5 traffic signs, which gives an accuracy of 100%. This compares favorably to the accuracy on the test set of 98.79%       
-
-#### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
-
+![png](./index15.png)
+![png](./index16.png)
+![png](./index17.png)
+![png](./index18.png)
+![png](./index19.png)
+![png](./index20.png)
+![png](./index21.png)
+![png](./index22.png)
 ![jpg](./writeup_img/predict_1.jpg)
  ```
   For the first image, the model rightly predicts Stop sign(probability of 1), and the image does contain a Stop sign. The top five soft max probabilities were:   
