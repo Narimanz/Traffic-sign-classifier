@@ -121,6 +121,7 @@ For more details, here's the tensorflow summary graph with Tensorboard.
 
 In retrain model, the parameters as follows:    
 * learning rate = 0.0009
+* betta = 0.001 ( For L2 regularization )  
 * optimizer = Adam    
 * batch size = 64    
 * max epochs = 100
@@ -155,8 +156,8 @@ And this is a graph that shows the evolution of the validation accuracy :
 
 My final model results were:   
 * Train Accuracy = 1.000  
-* Validation Accuracy = 0.979    
-* Test Accuracy = 0.965     
+* Validation Accuracy = 0.98    
+* Test Accuracy = 0.964     
 
 Firstly, I choose a pretrained model like VGG16, because it is classic way to use transfer learning but i have found that it is easyly overfitting. Then, i decided to choose another model which is LeNET in my case and make some adjustments by adding or taking away some layers, i've changed the activation function. I found that generating new samples and having a balanced data helped me improve accuracy. Finally, i've tuned my hyperparameters.    
 
@@ -201,129 +202,3 @@ The model was able to correctly guess 5 of the 5 traffic signs, which gives an a
  ```
 ![png](./index22.png)
 
-
-```
-For the second image, the model is sure that this is a Speed limit (50km/h) sign (probability of 1), and the image does contain a Speed limit (50km/h) sign. The top five soft max probabilities were    
-    * P0: 1.000000 - Speed limit (50km/h)
-    * P1: 0.000000 - Double curve
-    * P2: 0.000000 - Speed limit (60km/h)
-    * P3: 0.000000 - Bicycles crossing
-    * P4: 0.000000 - Ahead only
-```
-![jpg](./writeup_img/predict_3.jpg)
-```
-For the third image, the model is sure that this is a Road work sign (probability of 1), and the image does contain a Road work sign. The top five soft max probabilities were    
-    * P0: 1.000000 - Road work
-    * P1: 0.000000 - Stop
-    * P2: 0.000000 - Bumpy road
-    * P3: 0.000000 - Speed limit (70km/h)
-    * P4: 0.000000 - Dangerous curve to the right
-```
-![jpg](./writeup_img/predict_4.jpg)
-```
-For the fourth image, the model is sure that this is a Turn left ahead sign (probability of 1), and the image does contain a Turn left ahead sign. The top five soft max probabilities were    
-    * P0: 1.000000 - Turn left ahead
-    * P1: 0.000000 - Ahead only
-    * P2: 0.000000 - Vehicles over 3.5 metric tons prohibited
-    * P3: 0.000000 - Go straight or left
-    * P4: 0.000000 - Go straight or right
-```
-![jpg](./writeup_img/predict_5.jpg)
-```
-For the fifth image, the model is sure that this is a Speed limit (120km/h) sign (probability of 1), and the image does contain a Speed limit (120km/h) sign. The top five soft max probabilities were    
-    * P0: 0.999934 - Speed limit (120km/h)
-    * P1: 0.000066 - Speed limit (20km/h)
-    * P2: 0.000000 - Speed limit (70km/h)
-    * P3: 0.000000 - Keep left
-    * P4: 0.000000 - Vehicles over 3.5 metric tons prohibited
-```    
-
-
----
-
-### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
-#### 1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
-
-
-![png](./writeup_img/output_81_1.png)
-
-
-### Conv Layer 1
-
-
-```python
-output_Layer_FeatureMap(image_input,1)
-```
-
-    INFO:tensorflow:Restoring parameters from ./model/
-    Tensor("conv1_activation:0", shape=(?, 32, 32, 32), dtype=float32)
-    
-
-
-![png](./writeup_img/output_83_1.png)
-
-
-### Conv Layer 2
-
-
-```python
-output_Layer_FeatureMap(image_input,2)
-```
-
-    INFO:tensorflow:Restoring parameters from ./model/
-    Tensor("conv2_activation:0", shape=(?, 32, 32, 32), dtype=float32)
-    
-
-
-![png](./writeup_img/output_85_1.png)
-
-
-### Conv Layer 3
-
-
-```python
-output_Layer_FeatureMap(image_input,3)
-```
-
-    INFO:tensorflow:Restoring parameters from ./model/
-    Tensor("conv3_activation:0", shape=(?, 16, 16, 64), dtype=float32)
-    
-
-
-![png](./writeup_img/output_87_1.png)
-
-
-
-```python
-output_Layer_FeatureMap(image_input,4)
-```
-
-    INFO:tensorflow:Restoring parameters from ./model/
-    Tensor("conv4_activation:0", shape=(?, 16, 16, 64), dtype=float32)
-    
-
-
-![png](./writeup_img/output_88_1.png)
-
-
-
-```python
-output_Layer_FeatureMap(image_input,4)
-```
-
-    INFO:tensorflow:Restoring parameters from ./model/
-    Tensor("conv4_activation:0", shape=(?, 16, 16, 64), dtype=float32)
-    
-
-
-![png](./writeup_img/output_89_1.png)
-
-
-
-```python
-output_Layer_FeatureMap(image_input,5)
-```
-
-    INFO:tensorflow:Restoring parameters from ./model/
-    Tensor("conv5_activation:0", shape=(?, 8, 8, 128), dtype=float32)
-    
