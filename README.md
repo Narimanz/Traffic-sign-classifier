@@ -88,7 +88,7 @@ for class_n in range(n_classes):
             y_train = np.concatenate((y_train, [class_n]), axis=0)
 ```
 
-## 2、Model Architecture
+## 2. Model Architecture
 
 My final model Inspired by LeNET consisted of the following layers:
 
@@ -115,7 +115,7 @@ For more details, here's the tensorflow summary graph with Tensorboard.
 
 
 
-## 3、Train, Validate and Test the Model
+## 3. Train, Validate and Test the Model
 
 ### Train mode parameters
 
@@ -124,7 +124,7 @@ In retrain model, the parameters as follows:
 * optimizer = Adam    
 * batch size = 64    
 * max epochs = 100
-### Train, Validate and Test the Model
+
 ```python
 Training...
 
@@ -158,7 +158,7 @@ My final model results were:
 * Validation Accuracy = 0.979    
 * Test Accuracy = 0.965     
 
-Firstly, I choose the model like VGG16, becouse it is classics but i have found that it is easyly overfitting.    
+Firstly, I choose a pretrained model like VGG16, because it is classic way to use transfer learning but i have found that it is easyly overfitting. Then, i decided to choose another model which is LeNET in my case and make some adjustments by adding or taking away some layers, i've changed the activation function. I found that generating new samples and having a balanced data helped me improve accuracy. Finally, i've tuned my hyperparameters.    
   
 * How was the architecture adjusted and why was it adjusted? Typical adjustments could include choosing a different model architecture, adding or taking away layers (pooling, dropout, convolution, etc), using an activation function or changing the activation function. One common justification for adjusting an architecture would be due to overfitting or underfitting. A high accuracy on the training set but low accuracy on the validation set indicates over fitting; a low accuracy on both sets indicates under fitting.    
  Avoid overfitting, I add dropout layers after two conv layers. I choose Relu function as activation function to avoid vanishing gradient.     
