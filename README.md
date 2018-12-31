@@ -30,7 +30,7 @@ In this project, I used a convolutional neural network to classify traffic signs
 
 #### Show number of examples per class on train set
 
-Here is an exploratory visualization of the training data set. It is a bar chart showing how the data is umbalanced.
+Here is an exploratory visualization of the training data set. It is a bar chart showing how the data is unbalanced.
 
    ![png](./index.png)
    
@@ -72,7 +72,7 @@ new_X_test =  (X_test_gry - 127.5)/127.5
 
 
 #### Images generator
-In order to tackle the problem of umbalanced data set, I've set 2000 as a fixed number of examples for each class. For that, i have used some techniques and geometric transformations, thanks to OpenCV2, such as translation, rotation and affine transformation.   
+In order to tackle the problem of unbalanced data set, I've set 2000 as a fixed number of examples for each class. For that, i have used some techniques and geometric transformations, thanks to OpenCV2, such as translation, rotation and affine transformation.   
 
 ```python
 for class_n in range(n_classes):
