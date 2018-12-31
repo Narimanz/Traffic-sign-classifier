@@ -187,7 +187,7 @@ Here are the results of the prediction:
 | Priority road|  Priority road 							|
 | Slippery road|  Slippery road 							|
     
-The model was able to correctly guess 5 of the 5 traffic signs, which gives an accuracy of 100%. This compares favorably to the accuracy on the test set of 98.79%       
+   
 ![png](./index15.png)
 ![png](./index16.png)
 ![png](./index17.png)
