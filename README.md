@@ -21,7 +21,7 @@ In this project, I used a convolutional neural network to classify traffic signs
 ![png](./index12.png)
 
 
-##  Randomly show all classes iamges
+##  Randomly show all classes images
 
     
 ![png](./index7.png)
@@ -55,7 +55,7 @@ X_test_gry = np.sum(X_test/3, axis=3, keepdims=True)
 X_train_gry = np.sum(X_train/3, axis=3, keepdims=True)
 X_valid_gry = np.sum(X_valid/3, axis=3, keepdims=True)
 ```
-Then, i normalize my data so that it has mean zero and equal variance. For image data, i used (pixel - 127.5)/ 127.5 as way to approximately normalize my data. 
+Then, I normalize my data so that it has mean zero and equal variance. For image data, i used (pixel - 127.5)/ 127.5 as way to approximately normalize my data. 
 
 ```python
 new_X_train = (X_train_gry - 127.5)/127.5
@@ -72,7 +72,7 @@ new_X_test =  (X_test_gry - 127.5)/127.5
 
 
 #### Images generator
-In order to tackle the problem of umbalanced data set, i've set 2000 as a fixed number of examples for each class. For that, i have used some techniques and geometric transformations, thanks to OpenCV2, such as translation, rotation and affine transformation.   
+In order to tackle the problem of umbalanced data set, I've set 2000 as a fixed number of examples for each class. For that, i have used some techniques and geometric transformations, thanks to OpenCV2, such as translation, rotation and affine transformation.   
 
 ```python
 for class_n in range(n_classes):
