@@ -111,7 +111,7 @@ My final model Inspired by LeNET consisted of the following layers:
 
 For more details, here's the tensorflow summary graph with Tensorboard. 
 
-![png](./graph_.png)
+![png](./graph_1.png)
 
 
 
