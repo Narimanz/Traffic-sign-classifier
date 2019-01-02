@@ -105,7 +105,7 @@ My final model Inspired by LeNET consisted of the following layers:
 | Convolution 2D     	| 1x1 stride, outputs 1x1x400 	|
 | Activation					|	Tanh											|
 | Flatten              | outputs 400                   |
-| Concat       | Inputs = 400 + 1600, Outputs = 800 |
+| Concat       | Inputs = 400 + 1600, Outputs = 2000 |
 | DropOut   	      	| keep Prob 			                |
 | Fully connected		| outputs 43        				    		|
 
@@ -169,7 +169,7 @@ Here are 8 German traffic signs that I found on the web.
 
 ![png](./index13.png)
 
-    2 out of 8 signs were wrongly classified.
+    1 out of 8 signs were wrongly classified.
     The first and the second image might be difficult to classify because of their similarities with other traffic signs.
 
 #### 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
