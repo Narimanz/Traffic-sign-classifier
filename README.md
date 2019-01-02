@@ -95,17 +95,17 @@ My final model Inspired by LeNET consisted of the following layers:
 | Layer         		|     Description	        					| 
 |:----------------------|:----------------------------------------------| 
 | Input         		| 32x32x1 Gray image   							| 
-| Convolution 2D     	| 1x1 stride, outputs 28x28x6 	|
+| Convolution 2D     	| 1x1 stride, outputs 28x28x32	|
 | Activation					|	Tanh											|
-| Max pooling	      	| 2x2 stride,  outputs 14x14x6 				|
-| Convolution 2D      	| 1x1 stride, outputs 10x10x16 	|
+| Max pooling	      	| 2x2 stride,  outputs 14x14x32 				|
+| Convolution 2D      	| 1x1 stride, outputs 10x10x64 	|
 | Activation					|	Tanh											|
-| Max pooling	      	| 2x2 stride,  outputs 5x5x16			     	|
-| Flatten             | outputs 400
+| Max pooling	      	| 2x2 stride,  outputs 5x5x64	     	|
+| Flatten             | outputs 1600
 | Convolution 2D     	| 1x1 stride, outputs 1x1x400 	|
 | Activation					|	Tanh											|
 | Flatten              | outputs 400                   |
-| Concat       | Inputs = 400 + 400, Outputs = 800 |
+| Concat       | Inputs = 400 + 1600, Outputs = 800 |
 | DropOut   	      	| keep Prob 			                |
 | Fully connected		| outputs 43        				    		|
 
@@ -156,8 +156,8 @@ And this is a graph that shows the evolution of the validation accuracy :
 
 My final model results were:   
 * Train Accuracy = 1.000  
-* Validation Accuracy = 0.98    
-* Test Accuracy = 0.964     
+* Validation Accuracy = 0.985    
+* Test Accuracy = 0.97     
 
 Firstly, I choose a pretrained model like VGG16, because it is classic way to use transfer learning but i have found that it is easyly overfitting. Then, i decided to choose another model which is LeNET in my case and make some adjustments by adding or taking away some layers, i've changed the activation function. I found that generating new samples and having a balanced data helped me improve accuracy. Finally, i've tuned my hyperparameters.    
 
@@ -179,17 +179,17 @@ Here are the results of the prediction:
 | Image			        |     Prediction	        					| 
 |:----------------------|:----------------------------------------------| 
 | Bumpy road |  Bumpy road                    			     		|
-| Double-curve |  Children crossing                    			     		|
+| Double-curve |  Beware of ice snow                   			     		|
 | General caution       	| General caution         							|
 | Speed limit (50km/h)  | Speed limit (50km/h)  						|
 | Speed limit (70km/h)  | Speed limit (70km/h)  						|
-| No entry 		| Turn left ahead		    	 				|
+| Turn left ahead 		| Turn left ahead		    	 				|
 | Priority road|  Priority road 							|
 | Slippery road|  Slippery road 							|
     
    
 ![png](./index15.png)
-![png](./index16.png)
+![png](./index22.png)
 ![png](./index17.png)
 ![png](./index18.png)
 ![png](./index19.png)
@@ -198,7 +198,7 @@ Here are the results of the prediction:
 
 
 ```
-  For the last image, the model didn't rightly predict Turn Left Ahead sign, but predicted it with a probabbility of 0.4 and classified the image as a No Entry sign with a probability of 0.6 which is not close enough to 1. The top five soft max probabilities were:   
+  For the last image, the model didn't rightly predict Doule curve sign. The top five soft max probabilities were:   
  ```
-![png](./index22.png)
+![png](./index16.png)
 
